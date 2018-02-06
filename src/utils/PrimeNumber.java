@@ -6,23 +6,35 @@ public class PrimeNumber {
 
     /* util class for handling prime numbers */
 
-    private static final int min = 0;
-    private static final int max = Integer.MAX_VALUE; // 2 ^ 31 - 1 = 2 147 483 647
+    private int min = 0;
+    private int max = Integer.MAX_VALUE; // 2 ^ 31 - 1 = 2 147 483 647
 
-    public static boolean isPrimeNumber(int number) {
-        for(int i = 2; 2*i < number; i++) {
-            if(number % i == 0)
+    public PrimeNumber() {}
+
+    public boolean isPrime(long number){
+        for(int i = 2 ; i <= (number / 2) ; i++) {
+            if(number % i == 0) {
                 return false;
+            }
         }
         return true;
     }
 
-    public static int getRandomPrimeNumber() {
+    public SafePrimeNumber getSafeRandomPrimeNumber() {
+        /* we want to generate a prime number in form p = 2 * q + 1 */
+        long p;
+        long q;
+        q = (long) getRandomPrimeNumber();
+        p = 2 * q + 1;
+        return new SafePrimeNumber(p,q);
+    }
+
+    private int getRandomPrimeNumber() {
         Random rand = new Random();
         int outPrimeNumber;
         do {
             outPrimeNumber = rand.nextInt(max - min) + min;
-        } while(!isPrimeNumber(outPrimeNumber));
+        } while(!isPrime(outPrimeNumber));
         return outPrimeNumber;
     }
 }
