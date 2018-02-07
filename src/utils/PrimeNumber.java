@@ -7,11 +7,11 @@ public class PrimeNumber {
     /* util class for handling prime numbers */
 
     private int min = 0;
-    private int max = Integer.MAX_VALUE; // 2 ^ 31 - 1 = 2 147 483 647
+    private int max = 100000;
 
-    public PrimeNumber() {}
+    public PrimeNumber() { }
 
-    public boolean isPrime(long number){
+    public boolean isPrime(int number){
         for(int i = 2 ; i <= (number / 2) ; i++) {
             if(number % i == 0) {
                 return false;
@@ -21,20 +21,20 @@ public class PrimeNumber {
     }
 
     public SafePrimeNumber getSafeRandomPrimeNumber() {
-        /* we want to generate a prime number in form p = 2 * q + 1 */
-        long p;
-        long q;
-        q = (long) getRandomPrimeNumber();
-        p = 2 * q + 1;
+        int pNumber = getRandomPrimeNumber(), p, q;
+        p = pNumber;
+        q = p / 2;
         return new SafePrimeNumber(p,q);
     }
 
-    private int getRandomPrimeNumber() {
+    public int getRandomPrimeNumber() {
         Random rand = new Random();
-        int outPrimeNumber;
+        int outPrimeNumberQ;
+        int outPrimeNumberP;
         do {
-            outPrimeNumber = rand.nextInt(max - min) + min;
-        } while(!isPrime(outPrimeNumber));
-        return outPrimeNumber;
+            outPrimeNumberQ = rand.nextInt(max - min) + min;
+            outPrimeNumberP = (2 * outPrimeNumberQ) + 1;
+        } while(!( isPrime(outPrimeNumberP) && isPrime(outPrimeNumberQ) ));
+        return outPrimeNumberP;
     }
 }

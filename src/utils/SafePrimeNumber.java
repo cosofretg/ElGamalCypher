@@ -4,29 +4,29 @@ public class SafePrimeNumber {
 
     /* This is an abstract representation for a prime number in form p = 2 * q + 1 */
 
-    private long p;
-    private long q;
+    private int p;
+    private int q;
 
     public SafePrimeNumber() {}
 
-    public SafePrimeNumber(long p, long q) {
+    public SafePrimeNumber(int p, int q) {
         this.p = p;
         this.q = q;
     }
 
-    public long getP() {
+    public int getP() {
         return p;
     }
 
-    public long getQ() {
+    public int getQ() {
         return q;
     }
 
-    public void setP(long p) {
+    public void setP(int p) {
         this.p = p;
     }
 
-    public void setQ(long q) {
+    public void setQ(int q) {
         this.q = q;
     }
 }
