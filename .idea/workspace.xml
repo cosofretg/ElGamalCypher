@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f69ca7e-108e-4cb8-b333-71e63329262e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/ElGamalCypher/Main.class" afterPath="$PROJECT_DIR$/out/production/ElGamalCypher/Main.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/ElGamalCypher/files/message_and_private_key.txt" afterPath="$PROJECT_DIR$/out/production/ElGamalCypher/files/message_and_private_key.txt" />
-      <change beforePath="$PROJECT_DIR$/out/production/ElGamalCypher/utils/CyclicGroup.class" afterPath="$PROJECT_DIR$/out/production/ElGamalCypher/utils/CyclicGroup.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/ElGamalCypher/utils/PrimeNumber.class" afterPath="$PROJECT_DIR$/out/production/ElGamalCypher/utils/PrimeNumber.class" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/files/message_and_private_key.txt" afterPath="$PROJECT_DIR$/src/files/message_and_private_key.txt" />
-      <change beforePath="$PROJECT_DIR$/src/utils/CyclicGroup.java" afterPath="$PROJECT_DIR$/src/utils/CyclicGroup.java" />
-      <change beforePath="$PROJECT_DIR$/src/utils/PrimeNumber.java" afterPath="$PROJECT_DIR$/src/utils/PrimeNumber.java" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Pow.java" afterPath="$PROJECT_DIR$/src/utils/Pow.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +29,8 @@
       <file leaf-file-name="Pow.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/utils/Pow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+            <state relative-caret-position="170">
+              <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -143,10 +135,10 @@
         <option value="$PROJECT_DIR$/src/encryption/KeyGenerator.java" />
         <option value="$PROJECT_DIR$/src/encryption/Encryption.java" />
         <option value="$PROJECT_DIR$/src/decryption/Shanks.java" />
-        <option value="$PROJECT_DIR$/src/utils/Pow.java" />
         <option value="$PROJECT_DIR$/src/utils/PrimeNumber.java" />
         <option value="$PROJECT_DIR$/src/utils/CyclicGroup.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/utils/Pow.java" />
       </list>
     </option>
   </component>
@@ -343,12 +335,12 @@
       <workItem from="1517767064305" duration="1838000" />
       <workItem from="1517857835759" duration="9737000" />
       <workItem from="1517940407782" duration="16012000" />
-      <workItem from="1518021124027" duration="21990000" />
+      <workItem from="1518021124027" duration="22106000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49577000" />
+    <option name="totallyTimeSpent" value="49693000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -631,8 +623,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/Pow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        <state relative-caret-position="170">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
           <folding />
         </state>
       </provider>
