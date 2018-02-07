@@ -6,8 +6,8 @@ public class PrimeNumber {
 
     /* util class for handling prime numbers */
 
-    private int min = 0;
-    private int max = 100000;
+    private int min = 2;
+    private int max = 10;
 
     public PrimeNumber() { }
 

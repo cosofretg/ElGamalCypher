@@ -26,7 +26,7 @@ public class CyclicGroup {
 
     public int getRandomElementFromGroup() {
         int min = 0;
-        int max = 100000;
+        int max = 10;
         Random rand = new Random();
         int outNumber;
         do {
