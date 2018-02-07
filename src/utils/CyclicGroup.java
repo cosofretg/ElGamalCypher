@@ -1,7 +1,5 @@
 package utils;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class CyclicGroup {
@@ -20,7 +18,7 @@ public class CyclicGroup {
         this.pn = new PrimeNumber();
     }
 
-    public int getOrder() { return order; }
+    public long getOrder() { return order; }
 
     public void setOrder(int order) {
         this.order = order;
@@ -28,7 +26,7 @@ public class CyclicGroup {
 
     public int getRandomElementFromGroup() {
         int min = 0;
-        int max = Integer.MAX_VALUE;
+        int max = 100000;
         Random rand = new Random();
         int outNumber;
         do {
@@ -47,15 +45,14 @@ public class CyclicGroup {
         }
         return isInGroup;
     }
-    
-    public int getCyclicGroupGenerator() {
-        SafePrimeNumber spn = pn.getSafeRandomPrimeNumber();
-        long p = spn.getP();
-        long q = spn.getQ();
-        double generator = (double) getRandomElementFromGroup();
+
+    public int getCyclicGroupGenerator(SafePrimeNumber spn) {
+        int p = spn.getP();
+        int q = spn.getQ();
+        double generator = 0.0;
         for (int i = 2; i <= (order - 1); i++) {  // [2, order - 1] = [2, p-2]
             generator = (double) getRandomElementFromGroup();
-           if ( (Math.pow(generator, 2) % p ) == 1 ) {
+            if ( (Math.pow(generator, 2) % p ) == 1 ) {
                continue;
             }
             if ( (Math.pow(generator, q)) != 1 ) {
