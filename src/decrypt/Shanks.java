@@ -1,5 +1,7 @@
 package decrypt;
 
+import utils.Pow;
+
 import java.util.ArrayList;
 import java.util.List;
 public class Shanks {
@@ -10,9 +12,10 @@ public class Shanks {
     {
         double mD = Math.sqrt(p-1);
         int m = (int)mD+1;
-        System.out.println(m);
-        double var = Math.pow(g,m)%p;
-        double val = 1;
+        int var = Pow.pow(g,m,p)%p;
+        System.out.println(Pow.pow(g,m,p));
+
+        int val = 1;
         for (int j=1;j<=m-1;j++)
         {
             L1.add((int)val);
@@ -25,19 +28,24 @@ public class Shanks {
         double mD = Math.sqrt(p-1);
         int m = (int)mD+1;
 
-        double frac = (p+1)/g;
-        System.out.println(frac);
-        double c = 1;
-        double val = y;
-        for (int i=1;i<=m-1;i++)
+        double frac = inversModular(g,p);
+        if (frac == -1)
         {
-
-            L2.add((int)val);
-            c = (c*frac)%p;
-
-            val = (y*c)%p;
+            System.out.println("Nu am gasit inversul modular");
         }
-        L2.add((int)val);
+        else {
+            System.out.println(frac);
+            double c = 1;
+            double val = y;
+            for (int i = 1; i <= m - 1; i++) {
+
+                L2.add((int) val);
+                c = (c * frac) % p;
+
+                val = (y * c) % p;
+            }
+            L2.add((int) val);
+        }
     }
     public int ShanksAlgoritm(int g,int y,int p)
     {
@@ -63,6 +71,23 @@ public class Shanks {
         }
         return -1;
     }
+    public int inversModular(int a,int p)
+    {
+
+        for (int i = 1;i<=p-1;i++)
+        {
+            int val = a*i;
+            int rez = val%p;
+            if (rez==1)
+            {
+                return i;
+            }
+        }
+        return -1;
+
+
+    }
+
     public void printList1()
     {
         for (int i=0;i<L1.size();i++)
