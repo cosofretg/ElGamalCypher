@@ -13,7 +13,7 @@ public class Shanks {
         double mD = Math.sqrt(p-1);
         int m = (int)mD+1;
         int var = Pow.pow(g,m,p)%p;
-        System.out.println(Pow.pow(g,m,p));
+        //System.out.println(Pow.pow(g,m,p));
 
         int val = 1;
         for (int j=1;j<=m-1;j++)
@@ -34,7 +34,7 @@ public class Shanks {
             System.out.println("Nu am gasit inversul modular");
         }
         else {
-            System.out.println(frac);
+            //System.out.println(frac);
             double c = 1;
             double val = y;
             for (int i = 1; i <= m - 1; i++) {

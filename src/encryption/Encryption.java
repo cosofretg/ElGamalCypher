@@ -29,7 +29,7 @@ public class Encryption {
     public void writeInFile(int x, String message) {
         PrintWriter writer = null;
         try {
-            writer = new PrintWriter("E:\\Master - Baze de date\\Criptografie\\ElGamalCypher\\src\\files\\message_and_private_key.txt", "UTF-8");
+            writer = new PrintWriter("C:\\Users\\MariusDK\\Desktop\\ElGamalCypher\\src\\files\\message_and_private_key.txt", "UTF-8");
             writer.println(x);
             writer.println(message);
         } catch (FileNotFoundException e) {
@@ -45,6 +45,7 @@ public class Encryption {
     public PublicKey encrypt(String message) {
         PublicKey publicKey = keyGenerator.generatePublicKey();
         PrivateKey privateKey = keyGenerator.generatePrivateKey();
+        System.out.println(privateKey.getX());
         int x = privateKey.getX();
         int messageEncrypted = encryptMessage(message);
         writeInFile(x, message);
