@@ -15,11 +15,9 @@ public class Main {
 //        PrimeNumber pn = new PrimeNumber();
 //        SafePrimeNumber spn = pn.getSafeRandomPrimeNumber();
 //        System.out.println(spn.getP() + " " + spn.getQ());
-//        Shanks shanks = new Shanks();
-//        System.out.println(shanks.ShanksAlgoritm(3,525,809));
-//        shanks.printList2();
-        IndexCalculus indexCalculus = new IndexCalculus();
-        System.out.println(indexCalculus.indexCalculusLog(3,1217,37,8));
+        Shanks shanks = new Shanks();
+        System.out.println(shanks.ShanksAlgoritm(5,34,97));
+        shanks.printList2();
     }
 
 }
