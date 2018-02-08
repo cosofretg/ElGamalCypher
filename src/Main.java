@@ -1,3 +1,4 @@
+import decrypt.IndexCalculus;
 import decrypt.Shanks;
 import utils.CyclicGroup;
 import utils.PrimeNumber;
@@ -14,10 +15,11 @@ public class Main {
 //        PrimeNumber pn = new PrimeNumber();
 //        SafePrimeNumber spn = pn.getSafeRandomPrimeNumber();
 //        System.out.println(spn.getP() + " " + spn.getQ());
-        Shanks shanks = new Shanks();
-        System.out.println(shanks.ShanksAlgoritm(3,525,809));
-        shanks.printList2();
-
+//        Shanks shanks = new Shanks();
+//        System.out.println(shanks.ShanksAlgoritm(3,525,809));
+//        shanks.printList2();
+        IndexCalculus indexCalculus = new IndexCalculus();
+        System.out.println(indexCalculus.indexCalculusLog(3,1217,37,8));
     }
 
 }
