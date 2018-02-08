@@ -12,16 +12,22 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-//        CyclicGroup cg = new CyclicGroup(4);
-//        System.out.println(cg.getRandomElementFromGroup() + " " + "\n");
-//        System.out.println(cg.getCyclicGroupGenerator());
-//        PrimeNumber pn = new PrimeNumber();
-//        SafePrimeNumber spn = pn.getSafeRandomPrimeNumber();
-//        System.out.println(spn.getP() + " " + spn.getQ());
+        //----------------------------ui----------------
+//        public class Main extends Application {
+//            @Override
+//            public void start(Stage primaryStage) throws Exception {
+//                Parent root = FXMLLoader.load(getClass().getResource("ui/ElGamal_window.fxml"));
+//                primaryStage.setTitle("ElGamal Cypher");
+//                primaryStage.setScene(new Scene(root));
+//                primaryStage.show();
+//            }
+//            public static void main(String[] args) {
+//                launch();
+//            }
 //
-        Encryption e = new Encryption();
-
-
+//        }
+        
+        //----------------------------------------------
         PublicKey p = new PublicKey();
         System.out.println(p.getG() + " " + p.getP() + " " + p.getY());
 
